@@ -1,0 +1,30 @@
+# 凭据与本机配置
+auth.json
+models.json
+trust.json
+*.env
+.env
+.env.*
+
+# Pi 运行时状态
+sessions/
+state/
+fff/
+npm/
+git/
+pideck/
+artifacts/
+mcp-cache.json
+mcp-npx-cache.json
+models-store.json
+run-history.jsonl
+pi-debug.log
+agent.zip
+
+# 扩展运行日志
+**/logs/
+*.log
+
+# 编辑器与系统文件
+.DS_Store
+Thumbs.db

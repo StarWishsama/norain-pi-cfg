@@ -1,0 +1,17 @@
+{
+  "timeout": 30000,
+  "servers": {
+    "typescript": {
+      "command": ["typescript-language-server", "--stdio"],
+      "extensions": [".ts", ".tsx", ".js", ".jsx"]
+    },
+    "java": {
+      "command": ["jdtls"],
+      "extensions": [".java"]
+    },
+    "vue": {
+      "command": ["vue-language-server", "--stdio"],
+      "extensions": [".vue"]
+    }
+  }
+}

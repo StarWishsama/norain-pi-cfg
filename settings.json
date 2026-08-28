@@ -1,0 +1,42 @@
+{
+  "quietStartup": true,
+  "defaultTools": ["read", "powershell", "edit", "write"],
+  "packages": [
+    "npm:@gotgenes/pi-permission-system",
+    "npm:@gotgenes/pi-subagents",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:pi-mcp-adapter",
+    "npm:pi-nano-context",
+    "npm:pi-image-paste",
+    "npm:pi-tool-display",
+    "npm:@ff-labs/pi-fff",
+    "npm:@upstash/context7-pi",
+    "npm:pi-wakatime",
+    "npm:pi-antigravity",
+    "npm:cc-safety-net",
+    "npm:pi-animations",
+    "npm:@lll9p/pi-better-compaction",
+    "npm:pi-rtk-optimizer",
+    "https://github.com/StarWishsama/pi-norain-extension",
+    "https://github.com/buddingnewinsights/pi-diff/",
+    "https://github.com/StarWishsama/pi-tps",
+    "npm:@99percentpeople/pi-thinking-fold",
+    "npm:@juicesharp/rpiv-warp",
+    "https://github.com/StarWishsama/pi-turing-usage.git",
+    "https://github.com/ayghri/i-have-adhd",
+    "npm:@ogulcancelik/pi-herdr"
+  ],
+  "theme": "dark",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.6-luna",
+  "defaultThinkingLevel": "high",
+  "hideThinkingBlock": false,
+  "enabledModels": [
+    "openai-codex/gpt-5.6-terra",
+    "openai-codex/gpt-5.6-luna",
+    "openai-codex/gpt-5.6-sol",
+    "deepseek/deepseek-v4-flash",
+    "deepseek/deepseek-v4-pro",
+    "antigravity/gemini-3.7-flash"
+  ]
+}
