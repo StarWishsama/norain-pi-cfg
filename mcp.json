@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "arthas-mcp": {
+      "url": "http://127.0.0.1:8563/mcp"
+    },
+    "jetbrain-idea": {
+      "url": "http://127.0.0.1:64342/sse"
+    },
+    "dbx": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@dbx-app/mcp-server"
+      ],
+      "env": {
+        "DBX_MCP_ALLOW_WRITES": "0"
+      }
+    },
+    "codegraph": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@colbymchenry/codegraph",
+        "serve",
+        "--mcp"
+      ]
+    }
+  }
+}
