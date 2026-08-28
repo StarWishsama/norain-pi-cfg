@@ -1,0 +1,8 @@
+{
+  "workingAnim": "shimmer",
+  "thinkingAnim": "shimmer",
+  "toolAnim": "shimmer",
+  "width": "full",
+  "randomMode": false,
+  "enabled": true
+}

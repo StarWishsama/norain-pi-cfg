@@ -1,0 +1,122 @@
+{
+  "$schema": "https://raw.githubusercontent.com/gotgenes/pi-packages/main/packages/pi-permission-system/schemas/permissions.schema.json",
+  "debugLog": false,
+  "permissionReviewLog": true,
+  "yoloMode": false,
+  "doublePressToConfirm": true,
+  "piInfrastructureReadPaths": [
+    "~/.pi/agent/**"
+  ],
+  "permission": {
+    "*": "ask",
+    "path": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "~/.ssh/*": "deny",
+      "$HOME/.ssh/*": "deny",
+      "*/users/*/.pi/agent/auth.json": "deny",
+      "*\\users\\*\\.pi\\agent\\auth.json": "deny"
+    },
+    "read": "allow",
+    "write": {
+      "*": "ask",
+      "./.trellis/tasks/*": "allow"
+    },
+    "edit": {
+      "*": "ask",
+      "./.trellis/tasks/*": "allow"
+    },
+    "ls": "allow",
+    "fffind": "allow",
+    "ffgrep": "allow",
+    "fff-multi-grep": "allow",
+    "codegraph_search": "allow",
+    "codegraph_explore": "allow",
+    "codegraph_node": "allow",
+    "codegraph_callers": "allow",
+    "codegraph_callees": "allow",
+    "codegraph_impact": "allow",
+    "codegraph_status": "allow",
+    "codegraph_files": "allow",
+    "ask_user_question": "allow",
+    "resolve-library-id": "allow",
+    "query-docs": "allow",
+    "grep": {
+      "*": { "action": "deny", "reason": "Use ffgrep or fff-multi-grep instead" }
+    },
+    "find": {
+      "*": { "action": "deny", "reason": "Use fffind instead" }
+    },
+    "bash": {
+      "*": "ask",
+      "cd *": "allow",
+      "pwd": "allow",
+      "ls": "allow",
+      "dir": "allow",
+      "ls *": "allow",
+      "dir *": "allow",
+      "cat *": "allow",
+      "type *": "allow",
+      "echo *": "allow",
+      "which *": "allow",
+      "where *": "allow",
+      "head *": "allow",
+      "tail *": "allow",
+      "python ./.trellis/scripts/task.py *": "allow",
+      "python ./.trellis/scripts/get_context.py *": "allow",
+      "python3 ./.trellis/scripts/task.py *": "allow",
+      "python3 ./.trellis/scripts/get_context.py *": "allow",
+      "grep": { "action": "deny", "reason": "Use ffgrep or fff-multi-grep instead" },
+      "grep *": { "action": "deny", "reason": "Use ffgrep or fff-multi-grep instead" },
+      "find": { "action": "deny", "reason": "Use fffind instead" },
+      "find *": { "action": "deny", "reason": "Use fffind instead" },
+      "rg *": "allow",
+      "git status *": "allow",
+      "export TRELLIS_CONTEXT_ID=*": "allow",
+      "export TRELLIS_CONTEXT_ID='*'": "allow",
+      "export TRELLIS_CONTEXT_ID=\"*\"": "allow",
+      "git log *": "allow",
+      "git show *": "allow",
+      "git diff *": "allow",
+      "git diff -- *": "allow",
+      "git branch *": "allow",
+      "git grep *": { "action": "deny", "reason": "Use ffgrep or fff-multi-grep instead" },
+      "npm": { "action": "deny", "reason": "Use pnpm instead" },
+      "npm *": { "action": "deny", "reason": "Use pnpm instead" }
+    },
+    "mcp": {
+      "*": "ask",
+      "mcp_status": "allow",
+      "mcp_list": "allow",
+      "mcp_search": "allow",
+      "mcp_describe": "allow",
+      "mcp_search_*": "allow",
+      "mcp_connect_*": "allow",
+      "dbx_dbx_list_connections": "allow",
+      "jetbrain-idea_jetbrain_idea_get_file_problems": "allow",
+      "jetbrain-idea_jetbrain_idea_build_project": "allow"
+    },
+    "skill": {
+      "resolve-library-id": "allow",
+      "query-docs": "allow",
+      "context7-docs": "allow",
+      "find-docs": "allow",
+      "find-skills": "allow",
+      "trellis-update-spec": "allow",
+      "trellis-check": "allow",
+      "trellis-before-dev": "allow",
+      "trellis-brainstorm": "allow",
+      "trellis-session-insight": "allow",
+      "*": "ask"
+    },
+    "external_directory": {
+      "*": "ask",
+      "~/.pi/agent/*": "allow",
+      "*/users/*/.pi/agent/*": "allow",
+      "*\\users\\*\\.pi\\agent\\*": "allow",
+      "*\\node_modules\\@earendil-works\\*": "allow",
+      "*/node_modules/@earendil-works/*": "allow"
+    }
+  }
+}
