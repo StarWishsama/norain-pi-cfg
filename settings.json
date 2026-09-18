@@ -1,19 +1,20 @@
 {
   "quietStartup": true,
-  "defaultTools": ["read", "powershell", "edit", "write"],
+  "defaultTools": [
+    "read",
+    "edit",
+    "write"
+  ],
   "packages": [
     "npm:@gotgenes/pi-permission-system",
-    "npm:@gotgenes/pi-subagents",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-mcp-adapter",
-    "npm:pi-nano-context",
     "npm:pi-image-paste",
     "npm:pi-tool-display",
     "npm:@ff-labs/pi-fff",
     "npm:@upstash/context7-pi",
     "npm:pi-wakatime",
     "npm:pi-antigravity",
-    "npm:cc-safety-net",
     "npm:pi-animations",
     "npm:@lll9p/pi-better-compaction",
     "npm:pi-rtk-optimizer",
@@ -24,19 +25,32 @@
     "npm:@juicesharp/rpiv-warp",
     "https://github.com/StarWishsama/pi-turing-usage.git",
     "https://github.com/ayghri/i-have-adhd",
-    "npm:@ogulcancelik/pi-herdr"
+    "npm:@narumitw/pi-herdr",
+    "npm:@gotgenes/pi-subagents",
+    "npm:@juicesharp/rpiv-advisor",
+    "npm:pi-web-access",
+    "npm:pi-nano-context"
   ],
   "theme": "dark",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.6-luna",
-  "defaultThinkingLevel": "high",
+  "defaultThinkingLevel": "xhigh",
   "hideThinkingBlock": false,
   "enabledModels": [
     "openai-codex/gpt-5.6-terra",
     "openai-codex/gpt-5.6-luna",
     "openai-codex/gpt-5.6-sol",
-    "deepseek/deepseek-v4-flash",
-    "deepseek/deepseek-v4-pro",
-    "antigravity/gemini-3.7-flash"
-  ]
+    "deepseek/deepseek-v4.1-flash",
+    "antigravity/gemini-3.8-flash",
+  ],
+  "defaultProjectTrust": "ask",
+  "compaction": {
+    "enabled": true,
+    "reserveTokens": 16384,
+    "keepRecentTokens": 20000
+  },
+  "retry": {
+    "enabled": true,
+    "maxRetries": 3
+  }
 }

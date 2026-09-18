@@ -1,7 +1,7 @@
 {
-  "workingAnim": "shimmer",
-  "thinkingAnim": "shimmer",
-  "toolAnim": "shimmer",
+  "workingAnim": "starfield",
+  "thinkingAnim": "starfield",
+  "toolAnim": "starfield",
   "width": "full",
   "randomMode": false,
   "enabled": true
