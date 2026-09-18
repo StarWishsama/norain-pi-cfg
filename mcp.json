@@ -23,7 +23,8 @@
         "@colbymchenry/codegraph",
         "serve",
         "--mcp"
-      ]
+      ],
+      "directTools": true
     }
   }
 }
