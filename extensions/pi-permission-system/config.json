@@ -5,7 +5,8 @@
   "yoloMode": false,
   "doublePressToConfirm": true,
   "piInfrastructureReadPaths": [
-    "~/.pi/agent/**"
+    "~/.pi/agent/**",
+    "C:/Users/admin/.pi/agent/**"
   ],
   "permission": {
     "*": "ask",
@@ -31,14 +32,14 @@
     "fffind": "allow",
     "ffgrep": "allow",
     "fff-multi-grep": "allow",
-    "codegraph_codegraph_search": "allow",
-    "codegraph_codegraph_explore": "allow",
-    "codegraph_codegraph_node": "allow",
-    "codegraph_codegraph_callers": "allow",
-    "codegraph_codegraph_callees": "allow",
-    "codegraph_codegraph_impact": "allow",
-    "codegraph_codegraph_status": "allow",
-    "codegraph_codegraph_files": "allow",
+    "codegraph_search": "allow",
+    "codegraph_explore": "allow",
+    "codegraph_node": "allow",
+    "codegraph_callers": "allow",
+    "codegraph_callees": "allow",
+    "codegraph_impact": "allow",
+    "codegraph_status": "allow",
+    "codegraph_files": "allow",
     "ask_user_question": "allow",
     "resolve-library-id": "allow",
     "query-docs": "allow",
@@ -46,7 +47,10 @@
       "*": { "action": "deny", "reason": "Use subagent instead" }
     },
     "grep": {
-      "*": { "action": "deny", "reason": "Use ffgrep or fff-multi-grep instead" }
+      "*": {
+        "action": "deny",
+        "reason": "Use ffgrep or fff-multi-grep instead"
+      }
     },
     "find": {
       "*": { "action": "deny", "reason": "Use fffind instead" }
@@ -66,12 +70,19 @@
       "where *": "allow",
       "head *": "allow",
       "tail *": "allow",
+      "sed *": "allow",
       "python ./.trellis/scripts/task.py *": "allow",
       "python ./.trellis/scripts/get_context.py *": "allow",
       "python3 ./.trellis/scripts/task.py *": "allow",
       "python3 ./.trellis/scripts/get_context.py *": "allow",
-      "grep": { "action": "deny", "reason": "Use ffgrep or fff-multi-grep instead" },
-      "grep *": { "action": "deny", "reason": "Use ffgrep or fff-multi-grep instead" },
+      "grep": {
+        "action": "deny",
+        "reason": "Use ffgrep or fff-multi-grep instead"
+      },
+      "grep *": {
+        "action": "deny",
+        "reason": "Use ffgrep or fff-multi-grep instead"
+      },
       "find": { "action": "deny", "reason": "Use fffind instead" },
       "find *": { "action": "deny", "reason": "Use fffind instead" },
       "rg *": "allow",
@@ -87,10 +98,40 @@
       "git blame *": "allow",
       "git ls-files *": "allow",
       "git remote -v": "allow",
-      "git grep *": { "action": "deny", "reason": "Use ffgrep or fff-multi-grep instead" },
+      "git grep *": {
+        "action": "deny",
+        "reason": "Use ffgrep or fff-multi-grep instead"
+      },
       "npm": { "action": "deny", "reason": "Use pnpm instead" },
       "npm *": { "action": "deny", "reason": "Use pnpm instead" },
-      "npx stylelint *": "allow"
+      "npx stylelint *": "allow",
+      "npx eslint *": "allow",
+      "npx vue-tsc *": "allow",
+      "pnpm exec eslint *": "allow",
+      "pnpm exec stylelint *": "allow",
+      "pnpm lint *": "allow",
+      "wc *": "allow",
+      "awk *": "allow",
+      "sort *": "allow",
+      "nl *": "allow",
+      "diff *": "allow",
+      "xxd *": "allow",
+      "git branch --show-current": "allow",
+      "git branch -a": "allow",
+      "git branch --all *": "allow",
+      "git branch --list *": "allow",
+      "git branch --contains *": "allow",
+      "git branch -a --list *": "allow",
+      "git branch -a --contains *": "allow",
+      "git stash list *": "allow",
+      "git rev-parse *": "allow",
+      "git show-ref *": "allow",
+      "git check-ignore *": "allow",
+      "git fetch *": "allow",
+      "python ./.trellis/scripts/*": "allow",
+      "python .trellis/scripts/*": "allow",
+      "py ./.trellis/scripts/*": "allow",
+      "py .trellis/scripts/*": "allow"
     },
     "powershell": {
       "*": "ask",
@@ -111,8 +152,14 @@
       "python ./.trellis/scripts/get_context.py *": "allow",
       "python3 ./.trellis/scripts/task.py *": "allow",
       "python3 ./.trellis/scripts/get_context.py *": "allow",
-      "grep": { "action": "deny", "reason": "Use ffgrep or fff-multi-grep instead" },
-      "grep *": { "action": "deny", "reason": "Use ffgrep or fff-multi-grep instead" },
+      "grep": {
+        "action": "deny",
+        "reason": "Use ffgrep or fff-multi-grep instead"
+      },
+      "grep *": {
+        "action": "deny",
+        "reason": "Use ffgrep or fff-multi-grep instead"
+      },
       "find": { "action": "deny", "reason": "Use fffind instead" },
       "find *": { "action": "deny", "reason": "Use fffind instead" },
       "rg *": "allow",
@@ -128,11 +175,40 @@
       "git blame *": "allow",
       "git ls-files *": "allow",
       "git remote -v": "allow",
-      "git grep *": { "action": "deny", "reason": "Use ffgrep or fff-multi-grep instead" },
+      "git grep *": {
+        "action": "deny",
+        "reason": "Use ffgrep or fff-multi-grep instead"
+      },
       "npm": { "action": "deny", "reason": "Use pnpm instead" },
       "npm *": { "action": "deny", "reason": "Use pnpm instead" },
       "npx stylelint *": "allow",
-      "npx eslint *": "allow"
+      "npx eslint *": "allow",
+      "npx vue-tsc *": "allow",
+      "pnpm exec eslint *": "allow",
+      "pnpm exec stylelint *": "allow",
+      "pnpm lint *": "allow",
+      "wc *": "allow",
+      "awk *": "allow",
+      "sort *": "allow",
+      "nl *": "allow",
+      "diff *": "allow",
+      "xxd *": "allow",
+      "git branch --show-current": "allow",
+      "git branch -a": "allow",
+      "git branch --all *": "allow",
+      "git branch --list *": "allow",
+      "git branch --contains *": "allow",
+      "git branch -a --list *": "allow",
+      "git branch -a --contains *": "allow",
+      "git stash list *": "allow",
+      "git rev-parse *": "allow",
+      "git show-ref *": "allow",
+      "git check-ignore *": "allow",
+      "git fetch *": "allow",
+      "python ./.trellis/scripts/*": "allow",
+      "python .trellis/scripts/*": "allow",
+      "py ./.trellis/scripts/*": "allow",
+      "py .trellis/scripts/*": "allow"
     },
     "mcp": {
       "*": "ask",
@@ -144,8 +220,22 @@
       "mcp_connect_*": "allow",
       "dbx_dbx_list_connections": "allow",
       "jetbrain-idea_get_file_problems": "allow",
-      "jetbrain-idea_jetbrain_idea_build_project": "allow"
+      "codegraph_search": "allow",
+      "codegraph_explore": "allow",
+      "codegraph_node": "allow",
+      "codegraph_callers": "allow",
+      "codegraph_callees": "allow",
+      "codegraph_impact": "allow",
+      "codegraph_status": "allow",
+      "codegraph_files": "allow",
+      "dbx_list_connections": "allow",
+      "jetbrain-idea_get_symbol_info": "allow",
+      "jetbrain-idea_get_project_dependencies": "allow"
     },
+    "notify_parent": "allow",
+    "get_subagent_result": "allow",
+    "ask_parent": "allow",
+    "steer_subagent": "allow",
     "skill": {
       "resolve-library-id": "allow",
       "query-docs": "allow",
@@ -163,6 +253,7 @@
     "external_directory": {
       "*": "ask",
       "~/.pi/agent/*": "allow",
+      "C:/Users/admin/.pi/agent/*": "allow",
       "*/users/*/.pi/agent/*": "allow",
       "*\\users\\*\\.pi\\agent\\*": "allow",
       "*\\node_modules\\@earendil-works\\*": "allow",

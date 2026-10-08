@@ -4,7 +4,9 @@
       "url": "http://127.0.0.1:8563/mcp"
     },
     "jetbrain-idea": {
-      "url": "http://127.0.0.1:64342/sse"
+      "type": "streamable-http",
+      "url": "http://127.0.0.1:64342/stream",
+      "headers": {}
     },
     "dbx": {
       "command": "npx",
@@ -24,7 +26,10 @@
         "serve",
         "--mcp"
       ],
-      "directTools": true
+      "env": {
+        "CODEGRAPH_NO_DAEMON": "1"
+      },
+      "exposure": "direct"
     }
   }
 }

@@ -8,7 +8,6 @@
   "packages": [
     "npm:@gotgenes/pi-permission-system",
     "npm:@juicesharp/rpiv-ask-user-question",
-    "npm:pi-mcp-adapter",
     "npm:pi-image-paste",
     "npm:pi-tool-display",
     "npm:@ff-labs/pi-fff",
@@ -16,7 +15,6 @@
     "npm:pi-wakatime",
     "npm:pi-antigravity",
     "npm:pi-animations",
-    "npm:@lll9p/pi-better-compaction",
     "npm:pi-rtk-optimizer",
     "https://github.com/StarWishsama/pi-norain-extension",
     "https://github.com/buddingnewinsights/pi-diff/",
@@ -28,19 +26,24 @@
     "npm:@gotgenes/pi-subagents",
     "npm:@juicesharp/rpiv-advisor",
     "npm:pi-web-access",
-    "npm:pi-nano-context"
+    "npm:pi-nano-context",
+    "npm:deword",
+    "npm:@narumitw/pi-codex-compact"
   ],
-  "theme": "dark",
+  "lastChangelogVersion": "1.1.0",
+  "theme": "light/dark",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-luna",
-  "defaultThinkingLevel": "xhigh",
+  "defaultModel": "gpt-6-luna",
+  "defaultThinkingLevel": "high",
   "hideThinkingBlock": false,
   "enabledModels": [
     "openai-codex/gpt-5.6-terra",
     "openai-codex/gpt-5.6-luna",
     "openai-codex/gpt-5.6-sol",
-    "deepseek/deepseek-v4.1-flash",
-    "antigravity/gemini-3.8-flash",
+    "deepseek/deepseek-v4-flash",
+    "deepseek/deepseek-v4-pro",
+    "antigravity/gemini-3.7-flash",
+    "openai-codex/gpt-6-luna"
   ],
   "defaultProjectTrust": "ask",
   "compaction": {

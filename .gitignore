@@ -26,5 +26,6 @@ agent.zip
 *.log
 
 # 编辑器与系统文件
+.idea/
 .DS_Store
 Thumbs.db
