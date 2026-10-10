@@ -19,7 +19,7 @@
 - `@juicesharp/rpiv-ask-user-question`：向用户发起结构化问题
 - `pi-mcp-adapter`：接入 MCP 工具服务
 - `pi-nano-context`：上下文管理
-- `@ff-labs/pi-fff`：文件查找和内容搜索
+- 文件查找和内容搜索使用 Pi 内置的 `find`、`grep`、`ls` 工具
 - `@upstash/context7-pi`：查询库和框架文档
 - `cc-safety-net`：操作安全防护
 

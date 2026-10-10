@@ -3,14 +3,16 @@
   "defaultTools": [
     "read",
     "edit",
-    "write"
+    "write",
+    "grep",
+    "find",
+    "ls"
   ],
   "packages": [
     "npm:@gotgenes/pi-permission-system",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-image-paste",
     "npm:pi-tool-display",
-    "npm:@ff-labs/pi-fff",
     "npm:@upstash/context7-pi",
     "npm:pi-wakatime",
     "npm:pi-antigravity",

@@ -5,8 +5,7 @@
   "yoloMode": false,
   "doublePressToConfirm": true,
   "piInfrastructureReadPaths": [
-    "~/.pi/agent/**",
-    "C:/Users/admin/.pi/agent/**"
+    "~/.pi/agent/**"
   ],
   "permission": {
     "*": "ask",
@@ -29,9 +28,6 @@
       "./.trellis/tasks/*": "allow"
     },
     "ls": "allow",
-    "fffind": "allow",
-    "ffgrep": "allow",
-    "fff-multi-grep": "allow",
     "codegraph_search": "allow",
     "codegraph_explore": "allow",
     "codegraph_node": "allow",
@@ -46,15 +42,9 @@
     "trellis_subagent": {
       "*": { "action": "deny", "reason": "Use subagent instead" }
     },
-    "grep": {
-      "*": {
-        "action": "deny",
-        "reason": "Use ffgrep or fff-multi-grep instead"
-      }
-    },
-    "find": {
-      "*": { "action": "deny", "reason": "Use fffind instead" }
-    },
+    "codemode": "allow",
+    "grep": "allow",
+    "find": "allow",
     "bash": {
       "*": "ask",
       "cd *": "allow",
@@ -75,16 +65,6 @@
       "python ./.trellis/scripts/get_context.py *": "allow",
       "python3 ./.trellis/scripts/task.py *": "allow",
       "python3 ./.trellis/scripts/get_context.py *": "allow",
-      "grep": {
-        "action": "deny",
-        "reason": "Use ffgrep or fff-multi-grep instead"
-      },
-      "grep *": {
-        "action": "deny",
-        "reason": "Use ffgrep or fff-multi-grep instead"
-      },
-      "find": { "action": "deny", "reason": "Use fffind instead" },
-      "find *": { "action": "deny", "reason": "Use fffind instead" },
       "rg *": "allow",
       "git status *": "allow",
       "export TRELLIS_CONTEXT_ID=*": "allow",
@@ -98,10 +78,6 @@
       "git blame *": "allow",
       "git ls-files *": "allow",
       "git remote -v": "allow",
-      "git grep *": {
-        "action": "deny",
-        "reason": "Use ffgrep or fff-multi-grep instead"
-      },
       "npm": { "action": "deny", "reason": "Use pnpm instead" },
       "npm *": { "action": "deny", "reason": "Use pnpm instead" },
       "npx stylelint *": "allow",
@@ -152,16 +128,6 @@
       "python ./.trellis/scripts/get_context.py *": "allow",
       "python3 ./.trellis/scripts/task.py *": "allow",
       "python3 ./.trellis/scripts/get_context.py *": "allow",
-      "grep": {
-        "action": "deny",
-        "reason": "Use ffgrep or fff-multi-grep instead"
-      },
-      "grep *": {
-        "action": "deny",
-        "reason": "Use ffgrep or fff-multi-grep instead"
-      },
-      "find": { "action": "deny", "reason": "Use fffind instead" },
-      "find *": { "action": "deny", "reason": "Use fffind instead" },
       "rg *": "allow",
       "git status *": "allow",
       "export TRELLIS_CONTEXT_ID=*": "allow",
@@ -175,10 +141,6 @@
       "git blame *": "allow",
       "git ls-files *": "allow",
       "git remote -v": "allow",
-      "git grep *": {
-        "action": "deny",
-        "reason": "Use ffgrep or fff-multi-grep instead"
-      },
       "npm": { "action": "deny", "reason": "Use pnpm instead" },
       "npm *": { "action": "deny", "reason": "Use pnpm instead" },
       "npx stylelint *": "allow",
@@ -253,7 +215,6 @@
     "external_directory": {
       "*": "ask",
       "~/.pi/agent/*": "allow",
-      "C:/Users/admin/.pi/agent/*": "allow",
       "*/users/*/.pi/agent/*": "allow",
       "*\\users\\*\\.pi\\agent\\*": "allow",
       "*\\node_modules\\@earendil-works\\*": "allow",

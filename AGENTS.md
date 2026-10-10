@@ -20,7 +20,8 @@
 
 ### 允许直接使用的命令
 
-- **文件操作**: 使用专用工具 (Read, Write, Edit, ffgrep, fffind, fff-multi-grep)，不使用 find/grep/cat/echo 等 shell 命令
+- **文件操作**: 优先使用 Pi 内置的 `read`、`write`、`edit`、`ls` 工具
+- **全局搜索**: 优先使用 Pi 内置的 `grep` 搜索文件内容、`find` 查找文件路径，而不是 shell 命令
 - **Git 只读操作**: `git status/log/diff/branch/show/blame`
 
 ### 不允许的行为
