@@ -6,16 +6,16 @@
     "write",
     "grep",
     "find",
-    "ls"
+    "ls",
+    "bash"
   ],
   "packages": [
     "npm:@gotgenes/pi-permission-system",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-image-paste",
-    "npm:pi-tool-display",
+    "npm:pi-hashline-edit-pro",
     "npm:@upstash/context7-pi",
-    "npm:pi-wakatime",
-    "npm:pi-antigravity",
+    "https://github.com/StarWishsama/pi-wakatime",
     "npm:pi-animations",
     "npm:pi-rtk-optimizer",
     "https://github.com/StarWishsama/pi-norain-extension",
@@ -23,16 +23,16 @@
     "https://github.com/StarWishsama/pi-tps",
     "npm:@99percentpeople/pi-thinking-fold",
     "npm:@juicesharp/rpiv-warp",
+    "https://github.com/StarWishsama/pi-turing-usage.git",
     "https://github.com/ayghri/i-have-adhd",
     "npm:@narumitw/pi-herdr",
     "npm:@gotgenes/pi-subagents",
-    "npm:@juicesharp/rpiv-advisor",
     "npm:pi-web-access",
     "npm:pi-nano-context",
     "npm:deword",
     "npm:@narumitw/pi-codex-compact"
   ],
-  "lastChangelogVersion": "1.1.0",
+  "lastChangelogVersion": "1.4.0",
   "theme": "light/dark",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-6-luna",
@@ -56,5 +56,7 @@
   "retry": {
     "enabled": true,
     "maxRetries": 3
-  }
+  },
+  "tuiMode": "regular",
+  "fullscreenCopyOnSelect": false
 }

@@ -21,11 +21,13 @@
     "read": "allow",
     "write": {
       "*": "ask",
-      "./.trellis/tasks/*": "allow"
+      "./.trellis/tasks/*": "allow",
+      "docs/comet/*": "allow"
     },
     "edit": {
       "*": "ask",
-      "./.trellis/tasks/*": "allow"
+      "./.trellis/tasks/*": "allow",
+      "docs/comet/*": "allow"
     },
     "ls": "allow",
     "codegraph_search": "allow",
@@ -78,8 +80,6 @@
       "git blame *": "allow",
       "git ls-files *": "allow",
       "git remote -v": "allow",
-      "npm": { "action": "deny", "reason": "Use pnpm instead" },
-      "npm *": { "action": "deny", "reason": "Use pnpm instead" },
       "npx stylelint *": "allow",
       "npx eslint *": "allow",
       "npx vue-tsc *": "allow",
@@ -107,7 +107,10 @@
       "python ./.trellis/scripts/*": "allow",
       "python .trellis/scripts/*": "allow",
       "py ./.trellis/scripts/*": "allow",
-      "py .trellis/scripts/*": "allow"
+      "py .trellis/scripts/*": "allow",
+      "comet *": "allow",
+      "grep *": "allow",
+      "find *": "allow"
     },
     "powershell": {
       "*": "ask",
@@ -141,8 +144,6 @@
       "git blame *": "allow",
       "git ls-files *": "allow",
       "git remote -v": "allow",
-      "npm": { "action": "deny", "reason": "Use pnpm instead" },
-      "npm *": { "action": "deny", "reason": "Use pnpm instead" },
       "npx stylelint *": "allow",
       "npx eslint *": "allow",
       "npx vue-tsc *": "allow",

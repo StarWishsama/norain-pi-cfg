@@ -21,11 +21,12 @@
 - `pi-nano-context`：上下文管理
 - 文件查找和内容搜索使用 Pi 内置的 `find`、`grep`、`ls` 工具
 - `@upstash/context7-pi`：查询库和框架文档
-- `cc-safety-net`：操作安全防护
+- `pi-web-access`：网页搜索与内容读取
+- `deword`：读取和编辑 Word 文档
 
 ### 终端与交互体验
 
-- `pi-tool-display`：优化工具、搜索、MCP、Shell 和差异输出的展示
+- `pi-hashline-edit-pro`：通过行锚点读取和编辑文件
 - `pi-animations`：为工作、思考和工具调用提供终端动画
 - `@99percentpeople/pi-thinking-fold`：折叠思考内容
 - `pi-image-paste`：支持在会话中粘贴图片
@@ -34,19 +35,25 @@
 
 ### 上下文、性能与使用统计
 
-- `@lll9p/pi-better-compaction`：支持 Openai 原生压缩的上下文压缩增强插件
+- `@narumitw/pi-codex-compact`：Codex 上下文压缩
 - `pi-rtk-optimizer`：整理和压缩命令输出，减少上下文占用
 - `pi-tps`：显示模型 tps, ttft 等信息
 - `pi-wakatime`：记录编码活动
 
 ### 模型与个性化扩展
 
-- `pi-antigravity`：Antigravity 模型提供商支持
+- [pi-turing-usage](https://github.com/StarWishsama/pi-turing-usage)：查询模型用量
 - [pi-norain-extension](https://github.com/StarWishsama/pi-norain-extension): 修改了启动 header
 - `@juicesharp/rpiv-warp`：Warp Terminal 辅助插件
-- `@ogulcancelik/pi-herdr`：Herdr 辅助插件
+- `@narumitw/pi-herdr`：Herdr 辅助插件
 
 ## 配套服务
 
 - MCP：Arthas、IntelliJ IDEA、DBX 和 CodeGraph
 - LSP：TypeScript、Java 和 Vue
+
+## 同步约定
+
+从本机 `~/.pi/agent` 同步可公开的配置，保留仓库的默认模型和可移植 MCP/LSP 命令；不复制凭据、私有模型配置、本机代理和运行数据。
+
+`extensions/pi-better-compaction/` 和 `extensions/pi-tool-display/` 保留已有配置，当前包列表未启用对应扩展。
